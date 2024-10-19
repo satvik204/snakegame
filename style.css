@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    font-family: "New Tegomin", serif;
+}
+
+body{
+    background: url(./img/bg.jpg);
+    min-height: 100vh;
+    background-size: 100vw 110vh;
+    background-repeat: no-repeat;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}
+
+.board{
+ background: linear-gradient(rgb(170,236,170),rgb(236,236,167));
+ width: 90vmin;
+ height: 92vmin;
+ border: 2px solid black;
+ display: grid;
+ grid-template-columns: repeat(18,1fr);
+ grid-template-rows: repeat(18,1fr);
+
+}
+.scorea,.Hi-scorea{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+}
+.Hi-scorea{
+    top: 49px;
+    right: 140px;
+}
+.head{
+   background:linear-gradient(rgb(240,124,124),rgb(228,228,129));
+   transform: scale(1.2);
+   border-radius: 12px;
+   border: 2px solid rgb(34,4,34);
+}
+
+.food{
+    background: linear-gradient(red,purple);
+    border: .25vmin solid black;
+    border-radius: 10px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.arrowblocks{
+    display: flex;
+     margin-top: 20px;
+     justify-content: space-around;
+     width: 92vmin;
+     margin-bottom: 20px;
+     display: none;
+}
+
+.arrow{
+    height: 60px;
+    width: 60px;
+    border-radius: 12px;
+    color: white;
+    background-color: orange;
+    text-align: center;
+    cursor: pointer;
+    text-align:center;
+    font-size: 40px;
+    transition: all .4s;
+}
+
+.arrow:hover{
+    transform: scale(1.3);
+}
+
+@media(max-width:1200px){
+    .arrowblocks{
+        display: flex;
+    }
+}
